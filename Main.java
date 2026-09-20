@@ -9,5 +9,15 @@ public class Main
         Terrarium tropicalTerrarium = myTerrarium.createTerrarium("tropical");
         tropicalTerrarium.describe();
 
+        TerrariumKitFactory desertKit = new DesertKitFactory();
+        Plant desertPlant = desertKit.createPlant();
+        Substrate desertSubstrate = desertKit.createSubstrate();
+        desertPlant.grow();
+        desertSubstrate.describe();
+        TerrariumKitFactory tropicalKit = new TropicalKitFactory();
+        Plant tropicalPlant = tropicalKit.createPlant();
+        Substrate tropicalSubstrate = tropicalKit.createSubstrate();
+        tropicalPlant.grow();
+        tropicalSubstrate.describe();
     }
 }
